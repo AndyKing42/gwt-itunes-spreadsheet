@@ -1,0 +1,10 @@
+<ui:UiBinder
+  xmlns:ui='urn:ui:com.google.gwt.uibinder'
+  xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+  <g:FlowPanel>
+    <g:Label>Login is required</g:Label>
+    <g:TextBox ui:field='userIdTextBox'>User ID</g:TextBox>
+    <g:PasswordTextBox ui:field='passwordTextBox'>Password</g:PasswordTextBox>
+    <g:Button ui:field='okButton'>OK</g:Button>
+  </g:FlowPanel>
+</ui:UiBinder>

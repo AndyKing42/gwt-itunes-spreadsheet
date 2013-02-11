@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+  version="2.5">
+  <listener>
+    <listener-class>org.greatlogic.itunes.server.ITunesServletContextListener</listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>requestFactoryServlet</servlet-name>
+    <servlet-class>org.greatlogic.itunes.server.ITunesRequestFactoryServlet</servlet-class>
+    <init-param>
+      <param-name>symbolMapsDirectory</param-name>
+      <!-- You'll need to compile with -extras and move the symbolMaps directory to this location if
+        you want stack trace deobfuscation to work -->
+      <param-value>WEB-INF/classes/symbolMaps/</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>requestFactoryServlet</servlet-name>
+    <url-pattern>/gwtRequest</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ITunes</servlet-name>
+    <servlet-class>org.greatlogic.itunes.server.ITunesRemoteServiceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ITunes</servlet-name>
+    <url-pattern>/itunes/ITunes</url-pattern>
+  </servlet-mapping>
+  <context-param>
+    <param-name>ConfigFilename</param-name>
+    <param-value>cfg/ITunes.cfg</param-value>
+  </context-param>
+</web-app>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:UiBinder
+  xmlns:ui='urn:ui:com.google.gwt.uibinder'
+  xmlns:g='urn:import:com.google.gwt.user.client.ui'
+  xmlns:v='urn:import:org.vectomatic.dnd'
+  xmlns:f='urn:import:org.vectomatic.file'>
+  <ui:with
+    field='bundle'
+    type='org.greatlogic.itunes.client.TestAppMain.TestAppMainBundle'/>
+  <g:FlowPanel>
+    <g:HTML>
+      <table>
+        <tr>
+          <td>
+            <img src="folder.svg"/>
+          </td>
+          <td>
+            <h1>lib-gwt-file-test</h1>
+          </td>
+        </tr>
+      </table>
+      <p>
+        This program demonstrates
+        <a href="http://www.vectomatic.org/lib-gwt-file">lib-gwt-file</a>
+        , an open-source GWT library to encapsulate the
+        <a href="http://www.w3.org/TR/FileAPI/">W3C file API</a>
+        . It has been tested with FF4+, Chromium 12+, Opera 12+, IE10+. For more details, please
+        visit
+        <a href="http://www.vectomatic.org/lib-gwt-file">http://www.vectomatic.org/lib-gwt-file.</a>
+      </p>
+      <p>
+        <i>NOTE: None of the files you select on your filesystem will actually be uploaded to a
+          server. The files are just loaded locally and displayed in your browser.</i>
+      </p>
+    </g:HTML>
+    <g:Label>Click the browse button to select local SVG, bitmap (png, gif, jpg) or text files to
+      load</g:Label>
+    <f:FileUploadExt ui:field="fileUpload"/>
+    <g:Label>Same thing as above, but with a custom browse button</g:Label>
+    <f:FileUploadExt
+      ui:field="customUpload"
+      styleName="{bundle.css.customUpload}"/>
+    <g:Button
+      text="Load files"
+      ui:field="browseBtn"/>
+    <g:Label>Alternatively, drag and drop your SVG, PNG or text files in this drop zone</g:Label>
+    <v:DropPanel
+      ui:field="dropPanel"
+      styleName="{bundle.css.dropPanel}"/>
+    <g:Label>Click this button to remove previously loaded files</g:Label>
+    <g:Button
+      ui:field="resetBtn"
+      text="Reset"/>
+    <g:FlowPanel
+      ui:field="imagePanel"
+      styleName="{bundle.css.imagePanel}"/>
+  </g:FlowPanel>
+</ui:UiBinder>

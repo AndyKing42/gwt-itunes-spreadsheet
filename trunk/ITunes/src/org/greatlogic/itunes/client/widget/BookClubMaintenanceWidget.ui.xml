@@ -1,0 +1,18 @@
+<ui:UiBinder
+  xmlns:ui='urn:ui:com.google.gwt.uibinder'
+  xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+  <g:VerticalPanel>
+    <g:HorizontalPanel>
+      <g:Label>Name</g:Label>
+      <g:TextBox
+        ui:field='bookClubName'
+        width='300px'></g:TextBox>
+    </g:HorizontalPanel>
+    <g:HorizontalPanel>
+      <g:Label>Description</g:Label>
+      <g:TextBox
+        ui:field='bookClubDesc'
+        width='300px'></g:TextBox>
+    </g:HorizontalPanel>
+  </g:VerticalPanel>
+</ui:UiBinder>
