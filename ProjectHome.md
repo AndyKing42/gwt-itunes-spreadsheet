@@ -1,0 +1,1 @@
+The objective of this project is to load the iTunes XML library file on the client machine using GWT, and to generate an Excel spreadsheet based upon user-specified criteria (whether this will actually come to fruition is questionable!)
